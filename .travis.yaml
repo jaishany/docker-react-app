@@ -6,4 +6,4 @@ before_install :
     - docker build -t jaishany/docker-react-app -f Dockerfile.dev .
  
 script :
-    - docker run jaishany/docker-react-app npm run test -- --coverage 
+    - docker run -e CI=true jaishany/docker-react-app npm run test -- --coverage 
